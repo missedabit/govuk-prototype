@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Redbridge SMS Confirmation prototype
+{% endblock %}
+
+{% set serviceName %}
+  SMS Confirmation page
+{% endset %}
+
+{% block header %}
+  {{ govukHeader({
+     "homepageUrl": "../start",   
+    serviceName: "SMS Prototype",
+    serviceUrl: "#",
+    "containerClasses": "govuk-width-container"
+  }) }}
+{% endblock %}
+
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="../start">SMS Home</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="sms-address">Breadcrumb 1</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="sms-mobile">Breadcrumb 2</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">Breadcrumb 3</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+
+      <h1 class="govuk-heading-xl">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+
+      <div class="govuk-panel govuk-panel--confirmation">
+        <h2 class="govuk-panel__title">Your application is complete</h2>
+        <div class="govuk-panel__body">
+          Your reference number<br><strong>HDJ2123F</strong>
+        </div>
+      </div>
+
+      <p>
+        We have sent you a confirmation email.
+      </p>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p>We've sent your application to Hackney Electoral Register Office.</p>
+      <p>They will contact you either to confirm your registration, or to ask for more information.</p>
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+
+
+    </div>
+  </div>
+
+{% endblock %}

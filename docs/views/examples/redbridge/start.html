@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Redbridge SMS prototype
+{% endblock %}
+
+
+{% block header %}
+  {{ govukHeader({
+    "homepageUrl": "/",
+    serviceName: "SMS Prototype",
+    serviceUrl: "#",
+    "containerClasses": "govuk-width-container"
+  }) }}
+{% endblock %}
+
+{% set serviceName %}
+  Redbridge SMS prototype based on gov.uk
+{% endset %}
+
+{% block beforeContent %}
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link">SMS Home</a>
+      </li>
+    </ol>
+  </div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        {% if serviceName %} {{ serviceName }} {% endif %}
+      </h1>
+
+      <p>Use this service to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Lorem Ipsum Lorem</li>
+        <li>Lorem Ipsum LoremLorem Ipsum LoremLorem Ipsum LoremLorem Ipsum LoremLorem Ipsum Lorem</li>
+        <li>Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem</li>
+        <li>Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem</li>
+        <li>Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem</li>
+      </ul>
+
+      <p>Add some content stuff here</p>
+
+      <p>
+        <a href="forms/sms-address.html" class="govuk-button govuk-button--start" role="button">Start now</a>
+      </p>
+
+      <p class="nadeem">This is the end</p>
+
+      <h2 class="govuk-heading-m">Before you start</h2>
+
+      <p>You can also <a href="#">register by post.</a></p>
+
+      <p>The online service is also available in <a href="#">Other content</a></p>
+
+      <p>You can’t register for this service if you’re in the UK illegally.</p>
+
+    </div>
+
+  </div>
+
+{% endblock %}
