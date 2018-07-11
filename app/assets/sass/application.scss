@@ -2,7 +2,7 @@
 $govuk-global-styles: true;
 
 // Import GOV.UK Frontend
-@import "node_modules/govuk-frontend/all.scss";
+@import "node_modules/govuk-frontend/all";
 
 // Patterns that aren't in Frontend
 @import "patterns/check-your-answers";
@@ -13,3 +13,6 @@ $govuk-global-styles: true;
 @import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.govuk-header { background:#484647 !important } 
+.govuk-header__container { border-bottom:10px solid #bc0067 !important } 
