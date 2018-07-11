@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% from "details/macro.njk" import govukDetails %}
+
 {% block pageTitle %}
   Redbridge SMS prototype
 {% endblock %}
@@ -153,9 +155,6 @@
         </span>
         <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
       </div>
-
-
-      {% from "details/macro.njk" import govukDetails %}
 
       {{ govukDetails({
         "summaryText": "Why we need this information",

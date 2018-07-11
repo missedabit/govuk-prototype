@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 
+{% from "details/macro.njk" import govukDetails %}
+
 {% block pageTitle %}
   Redbridge SMS prototype
 {% endblock %}
@@ -57,8 +59,6 @@
           <input class="govuk-input" id="registration-number" name="vehicle-registration" type="text">
         </div>
 
-
-      {% from "details/macro.njk" import govukDetails %}
 
       {{ govukDetails({
         "summaryText": "Why we need this information from you",
